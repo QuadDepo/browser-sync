@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
     "build-all": "lerna run build-all",

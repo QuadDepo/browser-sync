@@ -114,7 +114,11 @@
     }
 
     function getHost () {
-        return uiOptions.bs.mode === "snippet" ? window.location.hostname + ":" + uiOptions.bs.port : window.location.host;
+        if (window.location.hostname !== 'localhost') {
+            return window.location.hostname + ":" + uiOptions.bs.port
+        }
+
+        return socket.url 
     }
 
 })(window, document, ___browserSync___);
